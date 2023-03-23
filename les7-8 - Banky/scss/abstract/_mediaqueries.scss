@@ -1,0 +1,34 @@
+@use "./colors";
+@use "./vars";
+@use "./mixins";
+@media screen and (max-width: 62.5rem) {
+    .banky {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        &__accounts {
+            align-items: flex-start;
+            position: relative;
+            padding-bottom: 2rem;
+            &::after {
+                @include mixins.afterStyle;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    body{
+        padding:0;
+
+    }
+    .header{
+        border-radius: 0;
+    }
+    .banky{
+        &__transactions{
+            height: auto;
+            overflow: auto;
+        }
+    }
+}

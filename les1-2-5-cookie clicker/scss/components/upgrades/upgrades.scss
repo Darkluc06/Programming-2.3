@@ -1,0 +1,61 @@
+@use "../../abstract/colors";
+.upgrades{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background: map-get(colors.$upgrades,"background");
+    width: max-content;
+    border-radius: 1rem;
+    &__upgrade{
+        padding: 2rem;
+        display:grid;
+        grid-template-columns: 5% 95%;
+        grid-column-gap: 2rem;
+        transition: 0.2s all;
+        &:nth-of-type(1):hover{
+            border-radius: 1rem 1rem 0 0;
+        }
+        
+        &:nth-of-type(4){
+            border-radius: 0 0 1rem 1rem;
+        }
+        & > i{
+            transform: translateY(15%);
+            color: map-get(colors.$cookie,"spots");
+        }
+
+        &:hover{
+            cursor: pointer;
+            background: map-get(colors.$cookie,"spots");
+            color: whitesmoke;
+        }
+        &:hover > i{
+            color: whitesmoke;
+        }
+    }
+}
+
+.upgradesMobile{
+    list-style: none;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    grid-template-rows: 5rem;
+    margin-top: 2rem;
+    display: none;
+    &__upgrade{
+        background: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        gap: 0.5rem;
+        font-size: 80%;
+        transition: 0.05s all;
+        &:active{
+            transform: scale(0.8);
+        }
+    }
+
+}

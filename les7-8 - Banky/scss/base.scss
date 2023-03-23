@@ -1,0 +1,10 @@
+@use "./abstract/colors";
+@use "./abstract/vars";
+
+body{
+    padding: map-get(vars.$vhCalc,"paddingOfBody");
+    font-family: vars.$font-family;
+    background:vars.$gradient;
+    min-height: 100vh;
+    padding-bottom: 0;
+}

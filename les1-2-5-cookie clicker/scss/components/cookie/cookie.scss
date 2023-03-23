@@ -1,0 +1,78 @@
+@use "../../abstract/_colors.scss";
+.cookie{
+    width: 30rem;
+    background: map-get(colors.$cookie,"background");
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    border: 1rem solid map-get(colors.$cookie,"spots");
+    box-shadow: 
+        inset 0 0 10rem 0 map-get(colors.$cookie,"spots"),
+        -0.5rem 1.5rem 3rem 1rem rgba(0,0,0,0.2);
+    transition: 0.2s all;
+    &:hover{
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(0.95);
+    }
+    &--chocolate{
+        background: #3C2A21;
+        box-shadow: -0.5rem 1.5rem 3rem 1rem rgba(0,0,0,0.2);
+        border: 1rem solid #1C0A00;
+        
+    }
+    &--chocolate &__spots{
+        background: #1C0A00;
+        border-radius: 35%;
+    }
+    &--velvet{
+        background:hsl(0, 96%, 36%);
+        border: 1rem solid #FCFFE7;
+    }
+    &--velvet &__spots{
+        background: #FCFFE7;
+    }
+    &__spots{
+        width: 5rem;
+        aspect-ratio: 1/1;
+        border-radius: 47%;
+        background:map-get(colors.$cookie,"spots");
+        position: absolute;
+        &--1{
+            top: 15%;
+            left: 15%;
+        }
+        &--2{
+            top: 5%;
+            right: 10%;
+        }
+        &--3{
+            bottom: 20%;
+            left: 5%;
+        }
+        &--4{
+            bottom: 10%;
+            right: 5%;
+        }
+        &--5{
+            top: 35%;
+            left: 35%;
+        }
+        &--6{
+            bottom: 35%;
+            right: 25%;
+        }
+        &--7{
+            bottom: 5%;
+            left: 45%;
+        }
+        &--8{
+            top: 18%;
+            left: 55%;
+        }
+    }
+
+}
+

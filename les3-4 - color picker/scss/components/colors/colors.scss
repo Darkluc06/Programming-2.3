@@ -1,0 +1,62 @@
+@use "../../abstract/animations";
+
+.colors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    background: white;
+    padding: 4rem;
+    max-width: 150rem;
+    position: relative;
+    &__color{   
+        width: 25rem;
+        aspect-ratio: 1/1;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.2rem solid rgba(96, 150, 180,0.2);
+        border-radius: 0.5rem;
+        box-shadow: -0.5rem 1rem 1rem 0 rgba(0,0,0,0.2);
+        overflow: hidden;
+        transition: 0.2s;
+        position: relative;
+        animation-name: popupCard;
+        animation-duration: 0.8s;
+        animation-fill-mode: backwards;
+        &:hover{
+            cursor: pointer;
+            
+            transform: translateY(-0.5rem);
+        }
+        
+    }
+    @for $i from 1 through 100{
+        &__color:nth-of-type(#{$i}){
+            animation-delay: $i/10 + s;
+        }
+    }
+
+    &__circle{
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            transition: 0.2s transform;
+            &--selected{
+                transform: scale(3);
+            }
+    }
+
+    &__text{
+        position: absolute;
+        font-weight: 300;
+        animation-name: popup;
+        animation-duration: 0.6s;
+        display: none;
+    }
+
+    &__circle--selected + &__text{
+        display: block;
+    }
+}
