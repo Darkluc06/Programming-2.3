@@ -48,9 +48,6 @@
         color: map-get(colors.$baseColors,"whiteColor");
         box-shadow: vars.$box-shadow;
         transition: 0.2s all;
-        &:hover{
-            background:vars.$gradientDark;
-        }
     }
 
     &__eye {
