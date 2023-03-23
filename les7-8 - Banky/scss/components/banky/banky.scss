@@ -48,7 +48,7 @@
         color: map-get(colors.$baseColors,"whiteColor");
         box-shadow: vars.$box-shadow;
         transition: 0.2s all;
-        &:hover .banky__logo{
+        &:hover{
             background:vars.$gradientDark;
         }
     }
