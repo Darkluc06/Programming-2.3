@@ -2,11 +2,11 @@
     "Bankrekening": [
         {
             "from/to": "Jeroen",
-            "amount": 10
+            "amount": 30
         },
         {
             "from/to": "Dejorden",
-            "amount": 100
+            "amount": 500
         },
         {
             "from/to": "Mert",
