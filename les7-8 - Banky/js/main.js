@@ -228,6 +228,9 @@ class BankyRightSection {
         Object.entries(data).forEach((entry) => {
             this.mainAccount = document.createElement("li");
             this.mainAccount.classList = "banky__account";
+            this.mainAccount.onclick = () => {
+                console.log("clcikek");
+            }
 
             this.bankButton = document.createElement("button");
             this.bankButton.classList = "banky__switchAccount"
