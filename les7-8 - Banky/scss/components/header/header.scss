@@ -1,4 +1,5 @@
 @use "../../abstract/vars";
+@use "../../abstract/animations";
 .header{
     background: white;
     height: map-get(vars.$vhCalc, "heightOfHeader");
@@ -8,6 +9,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
+    
     &__logo{
         display: flex;
         font-size: 300%;
@@ -15,7 +17,6 @@
         gap: 0.5rem;
         font-weight: 400;
         justify-content: center;
-        
     }
     &__avatarWrapper{
         display: flex;

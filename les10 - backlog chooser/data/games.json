@@ -1,0 +1,44 @@
+{
+    "games": [
+        {
+            "title": "mario Oddysey",
+            "platform": "NINTENDOSWITCH"
+        },
+        {
+            "title": "Nioh 2",
+            "platform": "PS5"
+        },
+        {
+            "title": "Dark souls",
+            "platform": "PS4"
+        },
+        {
+            "title": "Bloodborne",
+            "platform": "PS4"
+        },
+        {
+            "title": "Elden ring",
+            "platform": "PS5"
+        },
+        {
+            "title": "Phasmophobia",
+            "platform": "STEAM"
+        },
+        {
+            "title": "Subnautica: Below Zero",
+            "platform": "STEAM"
+        },
+        {
+            "title": "Portal 2",
+            "platform": "STEAM"
+        },
+        {
+            "title": "Hollow Knight",
+            "platform": "PS4"
+        },
+        {
+            "title": "Resident Evil 7",
+            "platform": "PS4"
+        }
+    ]
+}

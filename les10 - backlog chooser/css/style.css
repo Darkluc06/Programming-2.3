@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body::after {
+  content: "";
+  background: radial-gradient(0.5vw 0.5vw, rgba(236, 236, 236, 0.1) 90%, transparent);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 10vw 10vw;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  width: 40rem;
+  background: rgba(236, 236, 236, 0.5019607843);
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background: rgb(9, 0, 36);
+  background: linear-gradient(39deg, rgb(25, 0, 101) 16%, rgb(78, 9, 121) 66%, rgb(85, 8, 132) 100%);
+  animation-name: popup;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card__heading {
+  font-size: 120%;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */
