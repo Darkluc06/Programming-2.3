@@ -280,7 +280,7 @@ class App {
         this.header = new Header("body")
         this.bankyMain = new BankyMain("body");
 
-        this.getDataFromApi = new GetData("./data/transactions.json")
+        this.getDataFromApi = new GetData("./les7-8%20-%20Banky/data/transactions.json")
         this.getDataFromApi
             .getJson().then((data) => {
                 this.bankyMain.makeButtonsFromData(data);
