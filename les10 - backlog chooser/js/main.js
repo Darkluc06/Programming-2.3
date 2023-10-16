@@ -1,7 +1,7 @@
 class GetData {
     data = null
     async getData() {
-        await fetch("../data/games.json")
+        await fetch("./data/games.json")
             .then((response) => {
                 return response.json();
             })
@@ -39,6 +39,7 @@ class URLScraper {
         this.platform = this.currentURL.split("platform=")[1]
         this.pretty = new PrettyPlatform(this.platform);
         this.platform = this.pretty.platform
+        console.log(window.location.href.split("platform="))
     }
 }
 
